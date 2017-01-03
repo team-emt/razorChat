@@ -1,0 +1,36 @@
+{
+  "name": "razorChat",
+  "version": "1.0.0",
+  "description": "Simple react chat app integrated with Razorframe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./node_modules/.bin/webpack -w & node server/server.js"
+  },
+  "author": "Michael Sotkin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4",
+    "file-loader": "^0.9.0",
+    "pg": "^6.1.2",
+    "razorframe": "^1.0.19",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2",
+    "url-loader": "^0.5.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.25.0",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.10.0",
+    "react-router": "^2.6.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.12.13"
+  }
+}
