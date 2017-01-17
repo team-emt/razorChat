@@ -4,15 +4,16 @@ body {
 }
 
 .notecard {
-    height: 80px;
+    height: 70px;
     width: 550px;
-    text-align: center;
+    text-align: left;
     background-color: white;
     padding: 20px 20px 20px 20px;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 140%;
     margin: 0 auto;
-    border: 1px solid gray;
+    border: 1px solid #e1e8ed;
+    border-radius: 4px;
 }
 
 .notecard:focus {
@@ -23,7 +24,7 @@ body {
     height: 60px;
     width: 100%;
     background-color: white;
-    margin: -10px 0 0 -10px;
+    margin: -10px 0 20px -10px;
     padding: 0px 0px 0 20px;
     text-align: center;
 }
@@ -57,4 +58,19 @@ button:focus {
     height: 35px;
     vertical-align: center;
     margin-top: -8px;
+}
+
+.iconwrap {
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.icon {
+    height: 20px;
+}
+
+#heart {
+    height: 16px;
+    padding-bottom: 2px;
 }
