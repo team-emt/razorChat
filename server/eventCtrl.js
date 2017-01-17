@@ -1,6 +1,5 @@
 const db = require('./database');
 // require razorframe to add error-handling functionality
-// const { rz } = require('../../razorframe/lib/Razorframe.js');
 const { rz } = require('razorframe');
 
 module.exports = {
