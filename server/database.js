@@ -1,11 +1,9 @@
 const pg = require('pg');
 
-const DATABASE_URL = 'postgres://spnypbauqtkiqz:c16333dbf85de04e35a47218d9a5fd2bedefa0739ad72678970b5f70bbfbc41d@ec2-50-17-207-16.compute-1.amazonaws.com:5432/dcmsti8l9anfmc';
-
 const db = {};
 
 pg.defaults.ssl = true;
-pg.connect(DATABASE_URL, (err, db_) => {
+pg.connect(process.env.RZCHAT_DB_URI, (err, db_) => {
 
   if (err) console.error(`Error with database connection: ${err}`);
   console.log(`connected to postgres!`);
