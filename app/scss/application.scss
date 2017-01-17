@@ -34,22 +34,6 @@ p {
     font-weight: bold;
 }
 
-button {
-    border: none;
-    background: none;
-    font-size: 15px;
-    padding: 10px 5px 10px 5px;
-}
-
-button:hover {
-    border: 1px solid #9ca4af;
-    border-radius: 2px;
-}
-
-button:focus {
-    outline: none;
-}
-
 .nav {
     display: inline-block;
 }
@@ -73,4 +57,28 @@ button:focus {
 #heart {
     height: 16px;
     padding-bottom: 2px;
+}
+
+// ChatInput.jsx
+.form-chat {
+    background-color: lightskyblue;
+    text-align: center;
+}
+.input-chat {
+    width: 350px;
+    height: 16px;
+}
+.submit-button {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    background: none;
+    font-size: 16px;
+    padding: 10px 5px 10px 5px;
+}
+.submit-button:hover {
+    border: 1px solid #fff;
+}
+.submit-button:focus {
+    border: 1px;
+    outline: none;
 }

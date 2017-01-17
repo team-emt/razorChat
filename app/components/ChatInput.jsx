@@ -5,7 +5,7 @@ class ChatInput extends Component {
   componentDidMount() {
     const textForm = document.getElementById('text-input-form');
     const textInput = document.getElementById('text-input-field');
-    
+
     // Event emitter for new chat messages
     textForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -17,13 +17,11 @@ class ChatInput extends Component {
 
   render() {
     return (
-      <div>
-        <form id="text-input-form" className="form-inline" onSubmit={this.sendChat}>
+      <div className="form-chat">
+        <form id="text-input-form" onSubmit={this.sendChat}>
           <div>
-            <input type="text" id="text-input-field" className="form-control" />
-          </div>
-          <div>
-            <button type="submit" className="btn btn-primary">Submit</button>
+            <input type="text" id="text-input-field" className="input-chat" />
+            <button type="submit" className="submit-button">Submit</button>
           </div>
         </form>
       </div>

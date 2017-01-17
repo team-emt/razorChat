@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM, { render } from 'react-dom';
 import Notecard from './components/Notecard';
 import Navbar from './components/Navbar';
+import ChatInput from './components/ChatInput';
 import styles from './scss/application.scss';
 import io from 'socket.io-client';
 
@@ -56,6 +57,7 @@ class App extends Component {
     return (
       <div>
         <Navbar />
+        <ChatInput />
         { messageArray }
       </div>
     )

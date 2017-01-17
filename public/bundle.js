@@ -66,6 +66,10 @@
 
 	var _Navbar2 = _interopRequireDefault(_Navbar);
 
+	var _ChatInput = __webpack_require__(223);
+
+	var _ChatInput2 = _interopRequireDefault(_ChatInput);
+
 	var _application = __webpack_require__(165);
 
 	var _application2 = _interopRequireDefault(_application);
@@ -144,6 +148,7 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_Navbar2.default, null),
+	        _react2.default.createElement(_ChatInput2.default, null),
 	        messageArray
 	      );
 	    }
@@ -20031,7 +20036,7 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(166);
+	var content = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./application.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(168)(content, {});
@@ -20051,76 +20056,8 @@
 	}
 
 /***/ },
-/* 166 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(167)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  background-color: lightblue;\n  font-family: Arial, Helvetica, sans-serif; }\n\n.notecard {\n  height: 70px;\n  width: 550px;\n  text-align: left;\n  background-color: white;\n  padding: 20px 20px 20px 20px;\n  font-size: 15px;\n  line-height: 140%;\n  margin: 0 auto;\n  border: 1px solid #e1e8ed;\n  border-radius: 4px; }\n\n.notecard:focus {\n  outline-color: #9ca4af; }\n\n#navbar {\n  height: 60px;\n  width: 100%;\n  background-color: white;\n  margin: -10px 0 20px -10px;\n  padding: 0px 0px 0 20px;\n  text-align: center; }\n\np {\n  font-size: 20px;\n  font-weight: bold; }\n\nbutton {\n  border: none;\n  background: none;\n  font-size: 15px;\n  padding: 10px 5px 10px 5px; }\n\nbutton:hover {\n  border: 1px solid #9ca4af;\n  border-radius: 2px; }\n\nbutton:focus {\n  outline: none; }\n\n.nav {\n  display: inline-block; }\n\n#razor {\n  height: 35px;\n  vertical-align: center;\n  margin-top: -8px; }\n\n.iconwrap {\n  display: inline-block;\n  margin-top: 15px;\n  margin-right: 20px; }\n\n.icon {\n  height: 20px; }\n\n#heart {\n  height: 16px;\n  padding-bottom: 2px; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 167 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
+/* 166 */,
+/* 167 */,
 /* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -29058,6 +28995,84 @@
 	};
 
 
+
+/***/ },
+/* 223 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ChatInput = function (_Component) {
+	  _inherits(ChatInput, _Component);
+
+	  function ChatInput() {
+	    _classCallCheck(this, ChatInput);
+
+	    return _possibleConstructorReturn(this, (ChatInput.__proto__ || Object.getPrototypeOf(ChatInput)).apply(this, arguments));
+	  }
+
+	  _createClass(ChatInput, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var textForm = document.getElementById('text-input-form');
+	      var textInput = document.getElementById('text-input-field');
+
+	      // Event emitter for new chat messages
+	      textForm.addEventListener('submit', function (e) {
+	        e.preventDefault();
+	        var contents = textInput.value;
+	        rz.publish(contents, 'write', 'chatMsg');
+	        textInput.value = '';
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'form-chat' },
+	        _react2.default.createElement(
+	          'form',
+	          { id: 'text-input-form', onSubmit: this.sendChat },
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement('input', { type: 'text', id: 'text-input-field', className: 'input-chat' }),
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'submit', className: 'submit-button' },
+	              'Submit'
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return ChatInput;
+	}(_react.Component);
+
+	ChatInput.propTypes = {};
+
+	exports.default = ChatInput;
 
 /***/ }
 /******/ ]);
