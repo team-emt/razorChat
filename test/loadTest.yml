@@ -4,7 +4,7 @@
     # "target": "http://custom-env.ggydansudp.us-west-2.elasticbeanstalk.com"
     # "target": "http://googlegram.herokuapp.com"
     "phases": [
-      {"duration": 15, "arrivalRate": 10},
+      {"duration": 15, "arrivalRate": 30},
       # {"duration": 120, "arrivalRate": 5, "rampTo": 50},
       # {"duration": 600, "arrivalRate": 50}
     ],
