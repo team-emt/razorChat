@@ -29,14 +29,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      messages: []
+      messages: [],
+      inputValue: ''
     };
-
+    this.sendChat = this.sendChat.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
     rz.subscribe('dbOnLoad', (data) => {
-      let copy = Object.assign({}, this.state, {messages : data.reverse()})
+      let copy = Object.assign({}, this.state, { messages : data.reverse() })
       this.setState(copy);
     });
 
@@ -48,6 +50,20 @@ class App extends Component {
     });
   }
 
+  sendChat(msg) {
+    msg.preventDefault();
+    rz.publish(this.state.inputValue, 'write', 'chatMsg');
+    let copy = Object.assign({}, this.state);
+    copy.inputValue = '';
+    this.setState(copy);
+  }
+
+  handleChange(event) {
+    let copy = Object.assign({}, this.state);
+    copy.inputValue = event.target.value;
+    this.setState(copy);
+  }
+
   render() {
     let messageArray = [];
     this.state.messages.forEach((msg, i) => {
@@ -57,7 +73,11 @@ class App extends Component {
     return (
       <div>
         <Navbar />
-        <ChatInput />
+        <ChatInput 
+          inputValue={this.state.inputValue}
+          sendChat={this.sendChat} 
+          handleChange={this.handleChange}
+           />
         { messageArray }
       </div>
     )

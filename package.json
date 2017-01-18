@@ -16,6 +16,8 @@
     "razorframe": "^1.0.19",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
     "socket.io": "^1.7.2",
     "socket.io-client": "^1.7.2",
     "url-loader": "^0.5.7"
