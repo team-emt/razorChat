@@ -22358,21 +22358,21 @@
 	        ),
 	        _react2.default.createElement(
 	            "div",
-	            null,
+	            { className: "iconwrap" },
 	            _react2.default.createElement(
 	                "div",
-	                { className: "iconwrap" },
+	                null,
 	                _react2.default.createElement("img", { className: "icon", src: __webpack_require__(204) })
 	            ),
 	            _react2.default.createElement(
 	                "div",
-	                { className: "iconwrap" },
+	                null,
 	                _react2.default.createElement("img", { className: "icon", src: __webpack_require__(205) })
 	            ),
 	            _react2.default.createElement(
 	                "div",
-	                { className: "iconwrap" },
-	                _react2.default.createElement("img", { id: "heart", src: __webpack_require__(206) })
+	                null,
+	                _react2.default.createElement("img", { id: "heart", className: "icon", src: __webpack_require__(206) })
 	            )
 	        )
 	    );
@@ -22426,12 +22426,12 @@
 	            "div",
 	            { className: "nav" },
 	            _react2.default.createElement(
-	                "p",
-	                null,
+	                "a",
+	                { href: "#" },
+	                _react2.default.createElement("img", { id: "razor", src: __webpack_require__(208) }),
 	                _react2.default.createElement(
-	                    "a",
-	                    { href: "#" },
-	                    _react2.default.createElement("img", { id: "razor", src: __webpack_require__(208) }),
+	                    "h1",
+	                    null,
 	                    "razorChat"
 	                )
 	            )
@@ -22470,20 +22470,11 @@
 
 	  return _react2.default.createElement(
 	    "div",
-	    { className: "form-chat" },
+	    { id: "chat-wrap", className: "form-chat" },
 	    _react2.default.createElement(
 	      "form",
 	      { id: "text-input-form", onSubmit: sendMsg },
-	      _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement("input", { type: "text", id: "text-input-field", className: "input-chat", value: inputValue, onChange: handleChange }),
-	        _react2.default.createElement(
-	          "button",
-	          { type: "submit", className: "submit-button" },
-	          "Submit"
-	        )
-	      )
+	      _react2.default.createElement("input", { type: "text", id: "text-input-field", className: "input-chat", placeholder: "What's on your mind?", value: inputValue, onChange: handleChange })
 	    )
 	  );
 	};
@@ -31193,7 +31184,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: lightblue;\n  font-family: Arial, Helvetica, sans-serif; }\n\n.notecard {\n  height: 70px;\n  width: 550px;\n  text-align: left;\n  background-color: white;\n  padding: 20px 20px 20px 20px;\n  font-size: 15px;\n  line-height: 140%;\n  margin: 0 auto;\n  border: 1px solid #e1e8ed;\n  border-radius: 4px; }\n\n.notecard:focus {\n  outline-color: #9ca4af; }\n\n#navbar {\n  height: 60px;\n  width: 100%;\n  background-color: white;\n  margin: -10px 0 20px -10px;\n  padding: 0px 0px 0 20px;\n  text-align: center; }\n\np {\n  font-size: 20px;\n  font-weight: bold; }\n\n.nav {\n  display: inline-block; }\n\n#razor {\n  height: 35px;\n  vertical-align: center;\n  margin-top: -8px; }\n\n.iconwrap {\n  display: inline-block;\n  margin-top: 15px;\n  margin-right: 20px; }\n\n.icon {\n  height: 20px; }\n\n#heart {\n  height: 16px;\n  padding-bottom: 2px; }\n\n.form-chat {\n  background-color: lightskyblue;\n  text-align: center; }\n\n.input-chat {\n  width: 350px;\n  height: 16px; }\n\n.submit-button {\n  border: 1px solid lightgrey;\n  border-radius: 5px;\n  background: none;\n  font-size: 16px;\n  padding: 10px 5px 10px 5px; }\n\n.submit-button:hover {\n  border: 1px solid #fff; }\n\n.submit-button:focus {\n  border: 1px;\n  outline: none; }\n", ""]);
+	exports.push([module.id, "body {\n  box-sizing: border-box;\n  background-color: #00BCD4;\n  font-family: Helvetica, Arial, sans-serif;\n  font-size: 16px; }\n\nh1 {\n  font-size: 1.25em; }\n\n#navbar {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 60px;\n  width: 100%;\n  background-color: #B2EBF2;\n  margin: -10px 0 20px -10px;\n  padding: 0px 0px 0 20px;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }\n\n.nav a {\n  display: -webkit-flex;\n  display: flex;\n  text-decoration: none;\n  color: black; }\n\n#razor {\n  height: 35px;\n  margin-top: 4px; }\n\n.notecard {\n  height: 70px;\n  width: 51.11111%;\n  text-align: left;\n  background-color: white;\n  padding: 20px;\n  font-size: 1em;\n  line-height: 140%;\n  margin: 0 auto;\n  border: 1px solid #e1e8ed;\n  border-radius: 4px;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }\n\n.iconwrap {\n  display: flex; }\n\n.icon {\n  height: 20px;\n  margin-top: 15px;\n  margin-right: 20px; }\n\n#heart {\n  margin-top: 17px;\n  height: 16px; }\n\n.form-chat {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background-color: #B2EBF2;\n  width: 51.11111%;\n  margin: 0 auto;\n  padding: 0 20px 0 20px;\n  height: 60px;\n  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }\n\n.input-chat {\n  width: 450px;\n  height: 24px;\n  font-size: 1em; }\n\n@media screen and (max-width: 900px) {\n  h1 {\n    display: none; }\n  .notecard {\n    width: 100%;\n    margin-left: -10px; }\n  #chat-wrap {\n    width: 100%;\n    margin-left: -10px; } }\n", ""]);
 
 	// exports
 
