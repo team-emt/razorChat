@@ -2,12 +2,9 @@ import React, { PropTypes } from 'react';
 
 const ChatInput = ({ inputValue, sendMsg, handleChange }) => {
   return (
-    <div className="form-chat">
+    <div id="chat-wrap" className="form-chat">
       <form id="text-input-form" onSubmit={sendMsg}>
-        <div>
-          <input type="text" id="text-input-field" className="input-chat" value={inputValue} onChange={handleChange} />
-          <button type="submit" className="submit-button">Submit</button>
-        </div>
+        <input type="text" id="text-input-field" className="input-chat" placeholder="What's on your mind?" value={inputValue} onChange={handleChange} />
       </form>
     </div>
   );
