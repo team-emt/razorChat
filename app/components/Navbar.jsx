@@ -4,7 +4,10 @@ const Navbar = () => {
     return (
         <div id="navbar">
             <div className="nav">
-            <p><a href="#"><img id="razor" src={require('./../assets/razor.png')} />razorChat</a></p>
+            <a href="#">
+                <img id="razor" src={require('./../assets/razor.png')} />
+                <h1>razorChat</h1>
+            </a>
             </div>
         </div>
     );
