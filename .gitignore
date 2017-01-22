@@ -1,4 +1,4 @@
 node_modules/
 npm-debug.log
 artillery*
-app/publice/bundle.js
+public/bundle.js
