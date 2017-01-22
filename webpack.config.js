@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './app/app.jsx',
+  entry: './app/index.jsx',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
@@ -13,12 +13,12 @@ module.exports = {
   module: {
     loaders: [
       {
-        loader: 'babel-loader',
+        test: /\.jsx?$/,
         query: {
           presets: ['react', 'es2015']
         },
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
@@ -30,7 +30,7 @@ module.exports = {
       },
       { 
         test: /\.(png|jpg)$/,
-        loader: 'url-loader?limit=8192' 
+        loader: 'url-loader?limit=8192'
       }
     ]
   }
