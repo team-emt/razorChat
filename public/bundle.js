@@ -22172,7 +22172,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var socket = (0, _socket2.default)('http://localhost:3000');
+	// const socket = io('http://localhost:3000');
+	var socket = (0, _socket2.default)();
 
 	var rz = exports.rz = {
 	  publish: function publish(contents, action, eventOut) {
@@ -22358,21 +22359,21 @@
 	        ),
 	        _react2.default.createElement(
 	            "div",
-	            { className: "iconwrap" },
+	            null,
 	            _react2.default.createElement(
 	                "div",
-	                null,
+	                { className: "iconwrap" },
 	                _react2.default.createElement("img", { className: "icon", src: __webpack_require__(204) })
 	            ),
 	            _react2.default.createElement(
 	                "div",
-	                null,
+	                { className: "iconwrap" },
 	                _react2.default.createElement("img", { className: "icon", src: __webpack_require__(205) })
 	            ),
 	            _react2.default.createElement(
 	                "div",
-	                null,
-	                _react2.default.createElement("img", { id: "heart", className: "icon", src: __webpack_require__(206) })
+	                { className: "iconwrap" },
+	                _react2.default.createElement("img", { id: "heart", src: __webpack_require__(206) })
 	            )
 	        )
 	    );
