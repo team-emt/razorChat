@@ -4,7 +4,6 @@ const app = express();
 const http = require('http').Server(app);
 const { addToDb, showAll } = require('./eventCtrl');
 
-// const { rz } = require('../../razorframe/lib/Razorframe.js');
 const { rz } = require('razorframe');
 
 /**
