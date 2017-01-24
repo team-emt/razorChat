@@ -1,19 +1,13 @@
 const pg = require('pg');
-const url = require('url');
-const params = url.parse(process.env.RZCHAT_DB_URI);
-console.log(params);
-const auth = params.auth.split(':');
-
-
 
 const config = {
-  user: auth[0],
-  password: auth[1],
-  host: params.hostname,
-  port: params.port,
-  database: params.pathname.split('/')[1],
+  user: process.env.DB_USER,
+  password: process.env.DB_PW,
+  host: process.env.DB_HOST,
+  port: 5432,
+  database: process.env.DB_DATABASE,
   ssl: true
-};
+}
 
 const pool = new pg.Pool(config);
 const db = {};
