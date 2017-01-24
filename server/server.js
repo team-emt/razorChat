@@ -13,7 +13,7 @@ const { rz } = require('razorframe');
 */
 const rzConfig = {
   port: process.env.PORT || 3000,
-  cluster: true
+  cluster: false
 };
 
 /**
