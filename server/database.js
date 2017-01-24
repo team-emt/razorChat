@@ -1,16 +1,24 @@
 const pg = require('pg');
-const pool = new pg.Pool(process.env.RZCHAT_DB_URI);
+const url = require('url');
+const params = url.parse(process.env.RZCHAT_DB_URI);
+const auth = params.auth.split(':');
+
+const config = {
+  user: auth[0],
+  password: auth[1],
+  host: params.hostname,
+  port: params.port,
+  database: params.pathname.split('/')[1],
+  ssl: true
+};
+
+const pool = new pg.Pool(config);
 const db = {};
 
-pg.defaults.ssl = true;
+pool.connect((err, db_) => {
 
-pg.connect(process.env.RZCHAT_DB_URI, (err, db_) => {
-  console.log('----------------------------------');
-  console.log('rzchat_db_ur: ' + process.env.RZCHAT_DB_URI);
-  console.log('database_url: ' + process.env.DATABASE_URL);
   if (err) console.error(`Error with database connection: ${err}`);
   console.log(`connected to postgres!`);
-
   db_.query(`CREATE TABLE IF NOT EXISTS events
     (
     _id serial primary key,
