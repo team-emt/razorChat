@@ -1,9 +1,7 @@
 const pg = require('pg');
 const url = require('url');
 const params = url.parse(process.env.RZCHAT_DB_URI);
-console.log(`params: ${params}`);
-console.log(`url: ${url}`);
-console.log(`rzchat_db_uri: ${process.env.RZCHAT_DB_URI}`);
+console.log(params);
 const auth = params.auth.split(':');
 
 
