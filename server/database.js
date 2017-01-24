@@ -3,6 +3,9 @@ const url = require('url');
 const params = url.parse(process.env.RZCHAT_DB_URI);
 const auth = params.auth.split(':');
 
+console.log(`auth: ${auth}`);
+console.log(`params: ${params}`);
+
 const config = {
   user: auth[0],
   password: auth[1],
