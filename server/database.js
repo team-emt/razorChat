@@ -6,8 +6,8 @@ pg.defaults.ssl = true;
 
 pg.connect(process.env.RZCHAT_DB_URI, (err, db_) => {
   console.log('----------------------------------');
-  console.log(process.env.RZCHAT_DB_URI);
-  console.log(process.env.DATABASE_URL);
+  console.log('rzchat_db_ur: ' + process.env.RZCHAT_DB_URI);
+  console.log('database_url: ' + process.env.DATABASE_URL);
   if (err) console.error(`Error with database connection: ${err}`);
   console.log(`connected to postgres!`);
 
