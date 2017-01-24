@@ -4,7 +4,7 @@ const config = {
   user: process.env.DB_USER,
   password: process.env.DB_PW,
   host: process.env.DB_HOST,
-  port: 5432,
+  port: "5432",
   database: process.env.DB_DATABASE,
   ssl: true
 }
