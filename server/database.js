@@ -12,7 +12,7 @@ const config = {
 const pool = new pg.Pool(config);
 
 pool.connect((err) => {
-  if (err) console.err(err);
+  if (err) console.error(err);
   console.log('successfully connected to db through pooling!');
 });
 
