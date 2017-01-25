@@ -10,22 +10,43 @@ const config = {
 }
 
 const pool = new pg.Pool(config);
-const db = {};
 
-pool.connect((err, db_) => {
-
-  if (err) console.error(`Error with database connection: ${err}`);
-  console.log(`connected to postgres!`);
-  db_.query(`CREATE TABLE IF NOT EXISTS events
-    (
-    _id serial primary key,
-    string varchar
-    )`, (err, result) => {
-      if (err) console.log(err);
-      else console.log(`heyo!`);
-    })
-
-  db.conn = db_;
+pool.connect((err) => {
+  if (err) console.err(err);
+  console.log('successfully connected to db through pooling!');
 });
 
-module.exports = db;
+pool.query(`
+  CREATE TABLE IF NOT EXISTS events (
+    _id serial primary key, 
+    string varchar
+    )`, (err, result) => {
+    if (err) console.log(err);
+    else console.log(`events table created`);
+  });
+
+module.exports = pool;
+
+
+// const db = {};
+
+// pool.connect((err, db_) => {
+
+//   if (err) console.error(`Error with database connection: ${err}`);
+//   console.log(`connected to postgres!`);
+
+//   db_.query(`CREATE TABLE IF NOT EXISTS events
+//     (
+//     _id serial primary key,
+//     string varchar
+//     )`, (err, result) => {
+//       if (err) console.log(err);
+//       else console.log(`heyo!`);
+//     })
+
+//   db.conn = db_;
+// });
+
+// module.exports = db;
+
+
