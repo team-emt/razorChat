@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js"
   },
-  "author": "Michael Sotkin",
+  "author": "Travis Huff, Eddie Park, Michael Sotkin",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4",
