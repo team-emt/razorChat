@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
   },
-  "author": "Michael Sotkin",
+  "author": "Travis Huff, Eddie Park, Michael Sotkin",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4",
@@ -33,6 +34,6 @@
     "react-router": "^2.6.1",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.12.13"
+    "webpack": "^2.2.1"
   }
 }
