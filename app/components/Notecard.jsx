@@ -6,15 +6,9 @@ const Notecard = ({ msg }) => {
         <div><strong>Username</strong> @username</div>
         <div>{ msg }</div>
         <div>
-            <div className="iconwrap">
                 <img className="icon" src={require('./../assets/reply.png')}/>
-            </div>
-            <div className="iconwrap">
                 <img className="icon" src={require('./../assets/retweet.png')}/>
-            </div>
-            <div className="iconwrap">
                 <img id="heart" src={require('./../assets/heart.png')}/>
-            </div>
         </div>
         </div>
     );
