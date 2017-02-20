@@ -1,3 +1,4 @@
 node_modules/
 *.log
 artillery*
+.DS_Store
